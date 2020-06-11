@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.217" height="30.956" viewBox="0 0 29.217 30.956">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dcdcdc;
+      }
+    </style>
+  </defs>
+  <g id="about_icon" data-name="about icon" transform="translate(-1.5 1106)">
+    <path id="Icon_material-people" data-name="Icon material-people" class="cls-1" d="M16.108,20.021a6.261,6.261,0,1,0-6.261-6.261A6.235,6.235,0,0,0,16.108,20.021Zm0,4.174C6.644,24.2,1.5,33.593,1.5,38.456v-.348H30.717v.348C30.717,33.593,25.573,24.2,16.108,24.2Z" transform="translate(0 -1113.5)"/>
+  </g>
+</svg>
