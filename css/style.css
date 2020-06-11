@@ -15,6 +15,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 1px;
+    overflow-x: hidden;
 }
 
 .section1 {
@@ -135,10 +136,9 @@ body {
 /* btn-home */
 
 .btn10 {
-    position: absolute;
-    width: 100px;
-    height: 80px;
-    transition-duration: 0.5s;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .btn10 .icon {
@@ -147,7 +147,7 @@ body {
     height: 5px;
     width: 40px;
     top: 40px;
-    left: 35px;
+    right: 25px;
     background-color: #fff;
     transition-duration: 0.5s;
     -webkit-transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
@@ -848,6 +848,32 @@ body {
 }
 
 @media screen and (max-width: 760px) {
+    .nav-icon i {
+        margin-right: 10px;
+    }
+    .nav-bar-flex {
+        height: 80px;
+        width: 100%;
+    }
+    .nav-bar-hide {
+        right: 0;
+        top: -80px;
+        transition: all 0.35s ease-in 0s;
+        background: rgba(48, 48, 48, .5);
+    }
+    .nav-icon {
+        padding: 10px 0;
+        transform: scale(0.7);
+        flex-direction: row;
+    }
+    .nav-icon i {
+        font-size: 14px;
+    }
+    .nav-bar {
+        height: 80px;
+        width: 100%;
+        flex-direction: row;
+    }
     .about-content-flex {
         flex-direction: column;
     }

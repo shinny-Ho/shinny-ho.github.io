@@ -293,11 +293,9 @@
     </div>
     <div class="footer">Copyright © 2020 shinny design</div>
     <div class="nav-bar-flex">
-        <div class="menu-flex">
-            <div class="btn10">
-                <span class="icon"></span>
-                <span class="icon1"></span>
-            </div>
+        <div class="btn10">
+            <span class="icon"></span>
+            <span class="icon1"></span>
         </div>
 
         <div class="nav-bar">
@@ -344,40 +342,60 @@
             };
             // RESUME
             var resumeTop = $('#resume').position().top;
-            if (resumeTop <= (scrollPos + windowHeight / 2)) {
-                $('#resume .container.left ').each(function() {
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-                    if (bottom_of_window > bottom_of_object) {
-                        $(this).animate({
-                            opacity: '1',
-                            left: '0px'
-                        }, 1000);
+
+            $('#resume .container.left ').each(function() {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).animate({
+                        opacity: '1',
+                        left: '0px'
+                    }, 1000);
+                }
+            });
+            $('#resume .container.right ').each(function() {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).animate({
+                        opacity: '1',
+                        right: '-50%'
+                    }, 1000);
+                }
+            });
+
+
+            var mm = window.matchMedia("(max-width: 768px)");
+            mm.addListener(resizeWidth);
+            resizeWidth(mm);
+
+            function resizeWidth(pMatchMedia) {
+                if (pMatchMedia.matches) {
+                    var navbar = $('.nav-bar');
+                    var navhome = $('.btn10');
+                    var navbarPos = navbar.offset().top;
+                    if (scrollPos > 80) {
+                        navbar.addClass('nav-bar-hide');
+                        navhome.show();
+                    } else {
+                        navbar.removeClass('nav-bar-hide');
+                        // navhome.removeClass('menu-show');
+                        navhome.hide();
                     }
-                });
-                $('#resume .container.right ').each(function() {
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-                    if (bottom_of_window > bottom_of_object) {
-                        $(this).animate({
-                            opacity: '1',
-                            right: '-50%'
-                        }, 1000);
+                } else {
+                    var navbar = $('.nav-bar');
+                    var navhome = $('.btn10');
+                    var navbarPos = navbar.offset().top;
+                    if (scrollPos > 80 && navbarPos !== 0) {
+                        // navhome.addClass('menu-show');
+                        navbar.addClass('nav-bar-hide');
+                        navhome.show();
+                    } else {
+                        navbar.removeClass('nav-bar-hide');
+                        // navhome.removeClass('menu-show');
+                        navhome.hide();
                     }
-                });
-            };
-            // navbar
-            var navbar = $('.nav-bar');
-            var navhome = $('.btn10');
-            var navbarPos = navbar.offset().top;
-            if (scrollPos > 80 && navbarPos !== 0) {
-                // navhome.addClass('menu-show');
-                navbar.addClass('nav-bar-hide');
-                navhome.show();
-            } else {
-                navbar.removeClass('nav-bar-hide');
-                // navhome.removeClass('menu-show');
-                navhome.hide();
+                }
             }
 
         });
