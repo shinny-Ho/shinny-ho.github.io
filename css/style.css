@@ -905,32 +905,32 @@ html {
     .logo-text {
         font-size: 18px;
     }
-    .nav-icon i {
+    /* .nav-icon i {
         margin-right: 10px;
-    }
-    .nav-bar-flex {
+    } */
+    /* .nav-bar-flex {
         height: 80px;
         width: 100%;
-    }
-    .nav-bar-hide {
+    } */
+    /* .nav-bar-hide {
         right: 0;
         top: -80px;
         transition: all 0.35s ease-in 0s;
         background: rgba(48, 48, 48, .5);
-    }
-    .nav-icon {
+    } */
+    /* .nav-icon {
         padding: 10px 0;
         transform: scale(0.7);
         flex-direction: row;
-    }
-    .nav-icon i {
+    } */
+    /* .nav-icon i {
         font-size: 14px;
-    }
-    .nav-bar {
+    } */
+    /* .nav-bar {
         height: 80px;
         width: 100%;
         flex-direction: row;
-    }
+    } */
     .about-content-flex {
         flex-direction: column;
     }
