@@ -11,11 +11,18 @@ html,
 body {
     background-color: #000;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+    font-family: 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 1px;
     overflow-x: hidden;
+    /* height: 100%; */
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-y: scroll;
 }
 
 .section1 {
@@ -136,9 +143,9 @@ body {
 /* btn-home */
 
 .btn10 {
-    position: relative;
+    /* position: relative; */
     width: 100%;
-    height: auto;
+    /* height: 100% */
 }
 
 .btn10 .icon {
@@ -147,7 +154,7 @@ body {
     height: 5px;
     width: 40px;
     top: 40px;
-    right: 25px;
+    right: 20px;
     background-color: #fff;
     transition-duration: 0.5s;
     -webkit-transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
@@ -162,7 +169,7 @@ body {
     background-color: #fff;
     content: "";
     top: -15px;
-    right: 24px;
+    right: 19px;
     -webkit-transform: rotateZ(45deg) scaleX(0.75) translate(60px, 40px);
     transform: rotateZ(45deg) scaleX(0.75) translate(60px, 40px);
 }
@@ -206,6 +213,7 @@ body {
     right: 0;
     width: 100px;
     height: 100vh;
+    z-index: 3;
 }
 
 .nav-bar {
@@ -282,10 +290,7 @@ body {
     margin: 0 auto;
 }
 
-.about-section,
-.resume-section,
-.portfolio-section,
-.skill-section {
+.resume-section {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -293,10 +298,22 @@ body {
     width: 100%;
 }
 
+.about-section,
+.portfolio-section,
+.skill-section {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
 .about-content-flex {
     display: flex;
+    justify-content: center;
     width: 90%;
-    height: 440px;
+    height: calc(100% - 116px);
 }
 
 .about-split {
@@ -367,11 +384,17 @@ body {
 
 .tag {
     width: 100%;
+    height: 70px;
+    margin: 0 0 20px 0;
+}
+
+.tag-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 20px 0;
+    background-color: #000;
 }
 
 .tag span {
@@ -380,6 +403,11 @@ body {
     height: 1px;
     border-bottom: 1px solid rgb(112, 112, 112);
     position: relative;
+}
+
+.tag-height {
+    height: 70px;
+    background-color: #000;
 }
 
 .tag span:after {
@@ -397,10 +425,22 @@ body {
     display: block;
 }
 
-.tag h1 {
+.fixed {
+    position: fixed;
+    top: -10%;
+    /* height: 80px; */
+    translate: all .5s;
+    left: 0;
+    z-index: 2;
+}
+
+.about-section h1,
+.resume-section h1,
+.skill-section h1,
+.portfolio-section h1 {
     text-align: center;
     width: 100%;
-    margin: 60px 0 30px 0;
+    margin: 110px 0 30px 0;
     letter-spacing: 3px;
 }
 
@@ -617,7 +657,7 @@ body {
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    /* margin-left: -3px; */
 }
 
 .container {
@@ -639,7 +679,7 @@ body {
     width: 15px;
     height: 15px;
     transform: rotate(45deg);
-    left: -50px;
+    left: -47px;
     background-color: #444;
     top: 15px;
     z-index: 1;
@@ -652,7 +692,7 @@ body {
     width: 15px;
     height: 15px;
     transform: rotate(45deg);
-    left: -50px;
+    left: -47px;
     background-color: none;
     top: 15px;
     z-index: 1;
@@ -665,7 +705,7 @@ body {
     width: 15px;
     height: 15px;
     transform: rotate(45deg);
-    right: -45px;
+    right: -48px;
     background-color: #444;
     top: 15px;
     z-index: 1;
@@ -750,12 +790,18 @@ body {
     padding-top: 35px;
 }
 
+.progress-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .progress-wrapper {
     width: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .progress-content {
@@ -810,6 +856,11 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+    .about-section,
+    .portfolio-section,
+    .skill-section {
+        height: 100%;
+    }
     .progress-content {
         width: 100%;
         margin-right: 0;
@@ -937,41 +988,5 @@ body {
 @media screen and (max-width: 480px) {
     .portfolio-Triangle {
         width: calc(100% / 2);
-    }
-}
-
-
-/* .before_right {
-    -webkit-transform: translate(0%, -5%);
-    -moz-transform: translate(0%, -5%);
-    transform: translate(0%, -5%);
-} */
-
-
-/* .before_left {
-    -webkit-transform: translate(0%, -5%);
-    -moz-transform: translate(0%, -5%);
-    transform: translate(0%, -5%);
-} */
-
-.after_position {
-    animation: initPosition 1.8s ease forwards;
-    -webkit-animation: initPosition 1.8s ease forwards;
-    -moz-animation: initPosition 1.8s ease forwards;
-    opacity: 0;
-}
-
-.before_down {
-    -webkit-transform: translate(0, 10%);
-    -moz-transform: translate(0, 10%);
-    transform: translate(0, 10%);
-}
-
-@keyframes initPosition {
-    100% {
-        -webkit-transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        /* transform: translate(0, 0); */
-        opacity: 1;
     }
 }
