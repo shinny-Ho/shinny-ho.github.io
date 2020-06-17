@@ -207,39 +207,6 @@ html {
     cursor: pointer;
 }
 
-.nav-bar-flex {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100vh;
-    z-index: 3;
-}
-
-.nav-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background: rgb(48, 48, 48);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 0 0px 20px rgb(143, 143, 143);
-    transition: all 0.35s ease-in-out 0s;
-}
-
-.nav-bar-hide {
-    right: -100px;
-    transition: all 0.35s ease-in 0s;
-    background: rgba(48, 48, 48, .5);
-}
-
-.nav-bar span {
-    color: rgb(220, 220, 220);
-    font-size: 14px;
-}
-
 .nav-icon {
     padding: 20px 0;
     display: flex;
@@ -382,22 +349,35 @@ html {
     line-height: 23px;
 }
 
-.tag {
-    width: 100%;
-    height: 70px;
-    margin: 0 0 20px 0;
+.nav-bar-hide {
+    right: -100px;
+    transition: all 0.35s ease-in 0s;
+    background: rgba(48, 48, 48, .5);
 }
 
-.tag-wrapper {
+.nav-bar span {
+    color: rgb(220, 220, 220);
+    font-size: 14px;
+}
+
+
+/* .js-nav-bar {
+    top: 0;
+} */
+
+.nav-bar {
     width: 100%;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #000;
+    transition: all 0.35s ease-in-out 0s;
+    /* position: relative; */
 }
 
-.tag span {
+.nav-bar span {
     width: 100%;
     display: block;
     height: 1px;
@@ -405,12 +385,16 @@ html {
     position: relative;
 }
 
-.tag-height {
-    height: 70px;
-    background-color: #000;
+.nav-bar ul {
+    display: none;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
 }
 
-.tag span:after {
+.nav-bar span:after {
     content: "";
     width: 50px;
     height: 50px;
@@ -423,15 +407,17 @@ html {
     border-color: transparent rgb(112, 112, 112) rgb(112, 112, 112) transparent;
     background-color: #000;
     display: block;
+    z-index: 0;
 }
 
 .fixed {
     position: fixed;
-    top: -10%;
-    /* height: 80px; */
+    top: 0px;
+    height: 80px;
     translate: all .5s;
     left: 0;
     z-index: 2;
+    opacity: 0;
 }
 
 .about-section h1,
@@ -905,32 +891,6 @@ html {
     .logo-text {
         font-size: 18px;
     }
-    /* .nav-icon i {
-        margin-right: 10px;
-    } */
-    /* .nav-bar-flex {
-        height: 80px;
-        width: 100%;
-    } */
-    /* .nav-bar-hide {
-        right: 0;
-        top: -80px;
-        transition: all 0.35s ease-in 0s;
-        background: rgba(48, 48, 48, .5);
-    } */
-    /* .nav-icon {
-        padding: 10px 0;
-        transform: scale(0.7);
-        flex-direction: row;
-    } */
-    /* .nav-icon i {
-        font-size: 14px;
-    } */
-    /* .nav-bar {
-        height: 80px;
-        width: 100%;
-        flex-direction: row;
-    } */
     .about-content-flex {
         flex-direction: column;
     }

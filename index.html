@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="section1">
+    <div class="section1" id="home">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 345 250" xml:space="preserve">
                 <defs>
@@ -34,11 +34,15 @@
     </div>
     <div class="section2">
         <div class="wrapper">
-            <div class="tag">
-                <div class="tag-wrapper">
-                    <div class="tag-height"></div>
-                    <span></span>
-                </div>
+            <div class="nav-bar js-nav-bar">
+                <ul>
+                    <li class="nav-icon"><a href="#home">HOME</a></li>
+                    <li class="nav-icon"><a href="#about">ABOUT</a></li>
+                    <li class="nav-icon"><a href="#resume">RESUME</a></li>
+                    <li class="nav-icon"><a href="#skills">SKILLS</a></li>
+                    <li class="nav-icon"><a href="#portfolio">PORTFOLIO</a></li>
+                </ul>
+                <span></span>
             </div>
             <div class="about-section" id="about">
                 <h1>About Me</h1>
@@ -207,8 +211,6 @@
             <div class="portfolio-section" id="portfolio">
                 <h1>MY PORTFOLIO</h1>
                 <ul class="tab">
-                    <li><a href="#">LOGO DESIGN <span>|</span></a></li>
-                    <li><a href="#">PACKAGE DESIGN <span>|</span></a></li>
                     <li><a href="#">WEB DESIGN <span>|</span></a></li>
                     <li><a href="#">GRAPHIC DESIGN</a></li>
                 </ul>
@@ -306,7 +308,7 @@
         </div>
     </div>
     <div class="footer">Copyright © 2020 shinny design</div>
-    <div class="nav-bar-flex">
+    <!-- <div class="nav-bar-flex">
         <div class="nav-bar">
             <div class="btn10">
                 <span class="icon"></span>
@@ -317,7 +319,7 @@
             <a href="#skills" class="nav-icon"><i><img src="img/icon-about.svg"></i><span>SKILLS</span></a>
             <a href="#portfolio" class="nav-icon"><i><img src="img/icon-about.svg"></i><span>PORTFOLIO</span></a>
         </div>
-    </div>
+    </div> -->
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script>
@@ -325,47 +327,44 @@
 
         var navbar = $('.nav-bar');
         // btn滑到指定位置
-        $('.nav-bar a').click(function(e) {
+        $('.js-nav-bar a').click(function(e) {
             e.preventDefault();
             var target = $(this).attr('href');
             var targetPos = $(target).offset().top;
             $('html, body').animate({
                 scrollTop: targetPos
-            }, 1000);
+            }, 500);
         });
 
         $('.btn10').click(function() {
             $("html, body").animate({
                 scrollTop: 0
             }, 1000);
-            return false;
         });
         // nav-bar
-        var bodyClass = document.body.classList;
-        lastScrollY = 0;
-        // $('.nav-bar').hide();
-        // $('.btn10').hide();
-        window.addEventListener('scroll', function() {
-            var mm = window.matchMedia("(max-width: 768px)");
-            mm.addListener(resizeWidth);
-            resizeWidth(mm);
+        // var bodyClass = document.body.classList;
+        // lastScrollY = 0;
+        // window.addEventListener('scroll', function() {
+        //     var mm = window.matchMedia("(max-width: 768px)");
+        //     mm.addListener(resizeWidth);
+        //     resizeWidth(mm);
 
-            function resizeWidth() {
-                var st = $(window).scrollTop();
-                var navbar = $('.nav-bar');
-                var navhome = $('.btn10');
-                if (st > lastScrollY) {
-                    // navbar.addClass('nav-bar-hide');
-                    // navbar.show();
-                    navhome.show();
-                } else {
-                    navbar.removeClass('nav-bar-hide');
-                    navhome.hide();
-                    // navbar.hide();
-                }
-                lastScrollY = st;
-            }
-        });
+        //     function resizeWidth() {
+        //         var st = $(window).scrollTop();
+        //         var navbar = $('.nav-bar');
+        //         var navhome = $('.btn10');
+        //         if (st > lastScrollY) {
+        //             // navbar.addClass('nav-bar-hide');
+        //             // navbar.show();
+        //             navhome.show();
+        //         } else {
+        //             navbar.removeClass('nav-bar-hide');
+        //             navhome.hide();
+        //             // navbar.hide();
+        //         }
+        //         lastScrollY = st;
+        //     }
+        // });
 
         $(window).scroll(function() {
             // RESUME
@@ -406,19 +405,19 @@
             // 滑到某一區塊固定在上方
             var scrollVal = $(window).scrollTop();
             var tagpos = $(".wrapper").offset().top;
-            // console.log(scrollVal);
-            // console.log(tagpos);
-            console.log(tagpos - scrollVal);
-            if (tagpos - scrollVal < 0) {
 
-                $('.tag-wrapper').addClass('fixed');
-                $('.tag-wrapper').animate({
+            if (tagpos - scrollVal <= 0) {
+                $('.js-nav-bar').addClass('fixed');
+                $('.nav-bar ul').css('display', 'flex');
+
+                $('.fixed').animate({
                     opacity: '1',
-                    top: '0%',
                 }, 1000);
 
             } else {
-                $('.tag-wrapper').removeClass('fixed');
+
+                $('.nav-bar ul').css('display', 'none');
+                $('.js-nav-bar').removeClass('fixed');
 
             }
 
