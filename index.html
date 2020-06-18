@@ -324,9 +324,11 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script>
     $(document).ready(function() {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        var navbar = $('.nav-bar');
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            var navbar = $('.nav-bar');
+        });
         // btn滑到指定位置
         $('.js-nav-bar a').click(function(e) {
             e.preventDefault();
