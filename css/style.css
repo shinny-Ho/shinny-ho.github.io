@@ -892,7 +892,9 @@ html {
 
 @media screen and (max-width: 760px) {
     .nav-bar span:after {
-        display: none;
+        width: 30px;
+        height: 30px;
+        top: -15px;
     }
     .logo {
         transform: scale(0.7);
@@ -954,6 +956,13 @@ html {
     }
     .about-img {
         margin-top: 30px;
+    }
+    .nav-icon {
+        transform: scale(0.8);
+        padding: 0 5px;
+    }
+    .footer {
+        font-size: 14px;
     }
 }
 
