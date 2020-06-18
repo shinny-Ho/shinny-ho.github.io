@@ -846,8 +846,9 @@ html {
 
 @media screen and (max-width: 1024px) {
     .section1 {
-        min-height: 100vh;
-        height: 100%;
+        /* height: 100%; */
+        justify-content: flex-start;
+        padding-top: 50%;
     }
     .about-section,
     .portfolio-section,
