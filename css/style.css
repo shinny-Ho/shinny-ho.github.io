@@ -207,15 +207,6 @@ html {
     cursor: pointer;
 }
 
-.nav-icon {
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(0.8);
-}
-
 .logo-text {
     font-size: 26px;
     height: 28px;
@@ -257,7 +248,8 @@ html {
     margin: 0 auto;
 }
 
-.resume-section {
+.resume-section,
+.portfolio-section {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -266,7 +258,6 @@ html {
 }
 
 .about-section,
-.portfolio-section,
 .skill-section {
     display: flex;
     /* justify-content: center; */
@@ -386,12 +377,21 @@ html {
 }
 
 .nav-bar ul {
-    display: none;
     max-width: 1000px;
     width: 100%;
-    justify-content: space-between;
+    height: 70px;
+    display: flex;
+    justify-content: center;
     position: relative;
+    align-items: center;
     z-index: 3;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.nav-icon {
+    transform: scale(0.8);
+    padding: 0 20px;
 }
 
 .nav-bar span:after {
@@ -413,11 +413,15 @@ html {
 .fixed {
     position: fixed;
     top: 0px;
-    height: 70px;
+    /* height: 70px; */
     translate: all .5s;
     left: 0;
     z-index: 2;
-    opacity: 0;
+    opacity: 1;
+}
+
+.fadoin {
+    top: 100px;
 }
 
 .about-section h1,
@@ -517,7 +521,6 @@ html {
 .portfolio-Triangle:hover .circle {
     background: #333333;
     opacity: 1;
-    /* background-image: inherit; */
 }
 
 .pos1 {
@@ -842,6 +845,10 @@ html {
 }
 
 @media screen and (max-width: 1024px) {
+    .section1 {
+        min-height: 100vh;
+        height: 100%;
+    }
     .about-section,
     .portfolio-section,
     .skill-section {
@@ -885,6 +892,9 @@ html {
 }
 
 @media screen and (max-width: 760px) {
+    .nav-bar span:after {
+        display: none;
+    }
     .logo {
         transform: scale(0.7);
     }
@@ -942,6 +952,9 @@ html {
     }
     .right {
         left: 0%;
+    }
+    .about-img {
+        margin-top: 30px;
     }
 }
 

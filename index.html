@@ -408,20 +408,11 @@
 
             if (tagpos - scrollVal <= 0) {
                 $('.js-nav-bar').addClass('fixed');
-                $('.nav-bar ul').css('display', 'flex');
-
-                $('.fixed').animate({
-                    opacity: '1',
-                }, 1000);
-
+                $('.nav-bar ul').css('opacity', '1');
             } else {
-
-                $('.nav-bar ul').css('display', 'none');
                 $('.js-nav-bar').removeClass('fixed');
-
+                $('.nav-bar ul').css('opacity', '0');
             }
-
-
         });
 
 
