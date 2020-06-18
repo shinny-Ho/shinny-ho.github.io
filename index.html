@@ -324,12 +324,14 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script>
     $(document).ready(function() {
+        // 在手機上100vh調整
         window.addEventListener('resize', () => {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
-            var navbar = $('.nav-bar');
         });
+
         // btn滑到指定位置
+        var navbar = $('.nav-bar');
         $('.js-nav-bar a').click(function(e) {
             e.preventDefault();
             var target = $(this).attr('href');
@@ -411,10 +413,16 @@
 
             if (tagpos - scrollVal <= 0) {
                 $('.js-nav-bar').addClass('fixed');
-                $('.nav-bar ul').css('opacity', '1');
+                $('.nav-bar ul').css({
+                    "opacity": "1",
+                    "height": "70px"
+                });
             } else {
                 $('.js-nav-bar').removeClass('fixed');
-                $('.nav-bar ul').css('opacity', '0');
+                $('.nav-bar ul').css({
+                    "opacity": "0",
+                    "height": "0"
+                });
             }
         });
 
