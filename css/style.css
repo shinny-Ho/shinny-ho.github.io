@@ -25,6 +25,14 @@ html {
     overflow-y: scroll;
 }
 
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: block;
+}
+
 .section1 {
     width: 100%;
     height: 100vh;
@@ -336,8 +344,8 @@ html {
 
 .about-des {
     width: 80%;
-    overflow-x: hidden;
     line-height: 23px;
+    overflow-x: hidden;
 }
 
 .nav-bar-hide {
