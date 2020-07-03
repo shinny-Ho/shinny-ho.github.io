@@ -218,7 +218,6 @@ html {
 .logo-text {
     font-size: 26px;
     height: 28px;
-    line-height: 26px;
     border-right: 1px solid transparent;
     animation: typing -3.5s steps(13, end), blink-caret .75s step-end infinite;
     word-break: break-all;
@@ -333,7 +332,11 @@ html {
 }
 
 .about-name {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 35px;
     margin-top: 70px;
+    text-align: center;
 }
 
 .about-content-right {
@@ -344,8 +347,11 @@ html {
 
 .about-des {
     width: 80%;
-    line-height: 23px;
+    line-height: 30px;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .nav-bar-hide {
@@ -385,11 +391,11 @@ html {
 }
 
 .nav-bar ul {
-    max-width: 1000px;
-    width: 100%;
+    /* max-width: 1000px; */
+    width: 80%;
     /* height: 70px; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     align-items: center;
     z-index: 3;
@@ -400,6 +406,13 @@ html {
 .nav-icon {
     transform: scale(0.8);
     padding: 0 20px;
+    height: 100%;
+    transform: scale(0.8);
+    padding: 0 20px;
+    width: calc(80% / 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-bar span:after {
@@ -899,10 +912,22 @@ html {
 }
 
 @media screen and (max-width: 760px) {
+    .nav-bar ul {
+        width: 100%;
+    }
+    .nav-icon {
+        width: calc(100% / 5);
+    }
+    .about-des {
+        width: 100%;
+    }
+    .portfolio-Triangle {
+        width: calc(100% / 2);
+    }
     .nav-bar span:after {
-        width: 30px;
-        height: 30px;
-        top: -15px;
+        width: 40px;
+        height: 40px;
+        top: -20px;
     }
     .logo {
         transform: scale(0.7);
@@ -912,15 +937,11 @@ html {
     }
     .about-content-flex {
         flex-direction: column;
+        height: auto;
+        width: 90%;
     }
     .about-split {
         display: none;
-    }
-    .about-des {
-        width: 100%;
-    }
-    .about-content-flex {
-        height: auto;
     }
     .about-content-right {
         margin-top: 10px;
@@ -931,13 +952,15 @@ html {
     .timeline {
         width: 100%;
     }
+    .progress-wrapper {
+        width: 90%;
+    }
     .timeline::after {
-        left: 31px;
+        left: 15px;
     }
     .container {
-        width: calc(100% - 90px);
-        padding-left: 70px;
-        padding-right: 25px;
+        width: calc(100% - 65px);
+        padding-left: 40px;
     }
     .container::before {
         left: 60px;
@@ -946,7 +969,13 @@ html {
         border-color: transparent white transparent transparent;
     }
     .content::after {
-        left: -49px;
+        left: -32px;
+    }
+    .right .content::after {
+        left: -32px;
+    }
+    .right .content::before {
+        display: none;
     }
     .left .timeline-title {
         left: 0;
