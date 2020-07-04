@@ -45,6 +45,11 @@ html {
 
 /* logo動畫 */
 
+.logo {
+    width: 268px;
+    height: auto;
+}
+
 .pen {
     fill: none;
     stroke: #7a4f9e;
@@ -107,114 +112,6 @@ html {
     }
 }
 
-
-/* logo動畫結束 */
-
-.logo {
-    width: 268px;
-    height: auto;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(3px 8px 7px rgb(102, 45, 145));
-}
-
-.menu {
-    position: relative;
-    top: 0;
-    right: 50%;
-    width: 100px;
-    height: 100vh;
-    transition: all 0.35s ease-in-out 0s;
-}
-
-.menu-show {
-    right: 0px;
-    transition: all 0.35s ease-in-out 0s;
-}
-
-.menu-flex {
-    position: relative;
-}
-
-
-/* .menu {
-    position: absolute;
-    top: 0;
-    left: 30px;
-    display: none;
-} */
-
-
-/* btn-home */
-
-.btn10 {
-    /* position: relative; */
-    width: 100%;
-    /* height: 100% */
-}
-
-.btn10 .icon {
-    transition-duration: 0.5s;
-    position: absolute;
-    height: 5px;
-    width: 40px;
-    top: 40px;
-    right: 20px;
-    background-color: #fff;
-    transition-duration: 0.5s;
-    -webkit-transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
-    transform: rotateZ(-45deg) scaleX(0.75) translate(-18px, -6px);
-}
-
-.btn10 .icon1 {
-    transition-duration: 0.5s;
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background-color: #fff;
-    content: "";
-    top: -15px;
-    right: 19px;
-    -webkit-transform: rotateZ(45deg) scaleX(0.75) translate(60px, 40px);
-    transform: rotateZ(45deg) scaleX(0.75) translate(60px, 40px);
-}
-
-
-/* .btn10 .icon:after {
-    transition-duration: 0.5s;
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background-color: #fff;
-    content: "";
-    top: 15px;
-    -webkit-transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
-    transform: rotateZ(45deg) scaleX(0.75) translate(-18px, 6px);
-} */
-
-.btn10.open .icon {
-    transition-duration: 0.5s;
-    -webkit-transform: rotateZ(-270deg);
-    transform: rotateZ(-270deg);
-}
-
-.btn10.open .icon:before {
-    -webkit-transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
-    transform: rotateZ(-45deg) scaleX(0.75) translate(-18px, -6px);
-}
-
-.btn10.open .icon:after {
-    -webkit-transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
-    transform: rotateZ(45deg) scaleX(0.75) translate(-18px, 6px);
-}
-
-.btn10:hover {
-    cursor: pointer;
-}
-
 .logo-text {
     font-size: 26px;
     height: 28px;
@@ -245,6 +142,83 @@ html {
     }
 }
 
+.down {
+    width: 54px;
+    height: 54px;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    animation: indexIconAnimation 1s infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.up {
+    width: 54px;
+    height: 54px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 2;
+    cursor: pointer;
+    background-color: #7a4f9e;
+    transform: rotate(45deg);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.up-text-rotate {
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@-moz-keyframes indexIconAnimation {
+    0% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 70px;
+    }
+}
+
+@-webkit-keyframes indexIconAnimation {
+    0% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 70px;
+    }
+}
+
+@keyframes indexIconAnimation {
+    0% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 70px;
+    }
+}
+
+@-o-keyframes indexIconAnimation {
+    0% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 70px;
+    }
+}
+
+
+/* logo動畫結束 */
+
 .section2 {
     width: 100%;
 }
@@ -256,7 +230,8 @@ html {
 }
 
 .resume-section,
-.portfolio-section {
+.portfolio-section,
+.skill-section {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -264,8 +239,7 @@ html {
     width: 100%;
 }
 
-.about-section,
-.skill-section {
+.about-section {
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
@@ -348,7 +322,7 @@ html {
 .about-des {
     width: 80%;
     line-height: 30px;
-    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,21 +339,15 @@ html {
     font-size: 14px;
 }
 
-
-/* .js-nav-bar {
-    top: 0;
-} */
-
 .nav-bar {
     width: 100%;
-    /* height: 70px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #000;
     transition: all 0.35s ease-in-out 0s;
-    /* position: relative; */
+    position: relative;
 }
 
 .nav-bar span {
