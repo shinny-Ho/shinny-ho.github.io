@@ -40,6 +40,8 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url(../img/bg.png);
+    opacity: 0.3;
 }
 
 
@@ -120,7 +122,7 @@ html {
     word-break: break-all;
     overflow: hidden;
     letter-spacing: 5px;
-    color: #555;
+    color: #aaa;
 }
 
 @keyframes typing {
@@ -147,7 +149,7 @@ html {
     height: 54px;
     position: fixed;
     line-height: 15px;
-    bottom: 30px;
+    bottom: 100px;
     left: 50%;
     z-index: 2;
     background-color: rgba(123, 79, 158, 0.5);
@@ -306,6 +308,14 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.about-content-left.animation {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .about-img {
@@ -314,6 +324,7 @@ html {
     background-color: #444;
     transform: rotate(45deg);
     position: relative;
+    overflow: hidden;
 }
 
 .about-img:after {
@@ -328,6 +339,14 @@ html {
     border-color: #aaa;
     /* border: 1px solid #fff; */
     z-index: -1;
+}
+
+.about-img img {
+    position: relative;
+    top: -28%;
+    left: -22%;
+    width: 150%;
+    transform: rotate(-45deg);
 }
 
 .about-name {
@@ -350,6 +369,17 @@ html {
     flex: 1;
     display: flex;
     justify-content: center;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.about-content-right.animation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .about-des {
@@ -437,7 +467,7 @@ html {
     border-width: 1px;
     border-style: solid;
     border-color: transparent rgb(112, 112, 112) rgb(112, 112, 112) transparent;
-    background-color: #000;
+    background-color: #070707;
     display: block;
     z-index: 0;
 }
@@ -694,11 +724,28 @@ html {
     position: relative;
     background-color: inherit;
     width: calc(50% - 40px);
+    transition: all 1s;
+}
+
+.container.left {
+    transform: translateX(-100%);
     opacity: 0;
+}
+
+.container.left.animation {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .container.right {
     margin-left: 40px;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.container.right.animation {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .right .content::before {
@@ -740,12 +787,8 @@ html {
     z-index: 1;
 }
 
-.left {
-    left: -100px;
-}
-
 .right {
-    right: -100%;
+    right: -50%;
 }
 
 .right::after {
