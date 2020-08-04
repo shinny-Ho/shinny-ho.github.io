@@ -112,15 +112,17 @@ html {
     }
 }
 
-.logo-text {
-    font-size: 26px;
-    height: 28px;
-    border-right: 1px solid transparent;
-    animation: typing -3.5s steps(13, end), blink-caret .75s step-end infinite;
-    word-break: break-all;
+.section1 h1 {
+    color: #868686;
+    /* font-size: 26px; */
+    line-height: 38px;
+    /* letter-spacing: 3px; */
+    font: 200% Consolas, Monaco, monospace;
+    /* width: 14ch; */
+    white-space: nowrap;
     overflow: hidden;
-    letter-spacing: 5px;
-    color: #aaa;
+    border-right: .05em solid;
+    animation: typing 4s 4s steps(16) backwards, caret 1s steps(1) infinite;
 }
 
 @keyframes typing {
@@ -128,17 +130,16 @@ html {
         width: 0;
     }
     to {
-        width: 233.66px;
+        width: 14ch;
     }
 }
 
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
+@keyframes caret {
+    30% {
+        border-right-color: transparent;
     }
-    50% {
-        border-color: currentColor;
+    70% {
+        border-right-color: transparent;
     }
 }
 
@@ -481,7 +482,8 @@ html {
     position: relative;
 }
 
-.nav-icon a.active:after {
+.nav-icon a.active:after,
+.nav-icon a:active {
     width: 80%;
 }
 
@@ -489,7 +491,8 @@ html {
     width: 80%;
 }
 
-.nav-bar span:after {
+
+/* .nav-bar span:after {
     content: "";
     width: 50px;
     height: 50px;
@@ -503,7 +506,7 @@ html {
     background-color: #070707;
     display: block;
     z-index: 0;
-}
+} */
 
 .fixed {
     position: fixed;
