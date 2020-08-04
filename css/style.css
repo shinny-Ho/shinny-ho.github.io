@@ -161,7 +161,7 @@ html {
 .section1 h1 {
     color: #868686;
     line-height: 38px;
-    font: 200% Consolas, Monaco, monospace;
+    font: 150% Consolas, Monaco, monospace;
     white-space: nowrap;
     overflow: hidden;
     border-right: transparent;
