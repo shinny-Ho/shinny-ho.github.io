@@ -363,6 +363,7 @@ html {
 }
 
 .about-content-left {
+    padding-top: 60px;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -547,23 +548,6 @@ html {
     width: 80%;
 }
 
-
-/* .nav-bar span:after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    border-width: 1px;
-    border-style: solid;
-    border-color: transparent rgb(112, 112, 112) rgb(112, 112, 112) transparent;
-    background-color: #070707;
-    display: block;
-    z-index: 0;
-} */
-
 .fixed {
     position: fixed;
     top: 0px;
@@ -572,6 +556,7 @@ html {
     left: 0;
     z-index: 2;
     opacity: 1;
+    background-color: rgb(102, 45, 145);
 }
 
 .fadoin {
@@ -628,11 +613,11 @@ html {
     opacity: 0.5;
 }
 
-.portfolio-Triangle.pos1:hover .portfolio-front {
+.portfolio-Triangle:hover .portfolio-front {
     background-color: rgba(123, 79, 158, 0.5);
 }
 
-.portfolio-Triangle.pos1:hover .portfolio-img img {
+.portfolio-Triangle:hover .portfolio-img img {
     transform: scale(1.1);
     transition: all 0.5s;
 }
@@ -703,8 +688,6 @@ html {
     transform-origin: center;
 }
 
-@keyframes {}
-
 .pos1 {
     top: 0;
     left: calc(50% - 160px);
@@ -719,6 +702,11 @@ html {
     /* background-image: url('/img/original.jpg');
     background-size: cover;
     background-position: center; */
+    transform: rotate(180deg);
+}
+
+.pos2 img {
+    width: 170px;
     transform: rotate(180deg);
 }
 
@@ -934,7 +922,7 @@ html {
     position: absolute;
     top: 0;
     padding: 5px 0 5px 0;
-    width: 200px;
+    width: 335px;
     background-color: #444444;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -1087,6 +1075,9 @@ html {
     }
     .portfolio-img {
         padding-top: 0;
+    }
+    .pos2 img {
+        transform: rotate(360deg);
     }
 }
 
