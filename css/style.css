@@ -556,7 +556,7 @@ html {
     left: 0;
     z-index: 2;
     opacity: 1;
-    background-color: rgb(102, 45, 145);
+    /* background-color: rgb(102, 45, 145); */
 }
 
 .fadoin {
@@ -619,6 +619,11 @@ html {
 
 .portfolio-Triangle:hover .portfolio-img img {
     transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.portfolio-Triangle.pos2:hover .portfolio-img img {
+    transform: scale(1.1) rotate(180deg);
     transition: all 0.5s;
 }
 
@@ -1077,6 +1082,9 @@ html {
         padding-top: 0;
     }
     .pos2 img {
+        transform: rotate(360deg);
+    }
+    .portfolio-Triangle.pos2:hover .portfolio-img img {
         transform: rotate(360deg);
     }
 }

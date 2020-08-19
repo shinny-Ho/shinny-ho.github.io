@@ -102,7 +102,7 @@
                             <div class="timeline-content">
                                 <h3>神通集團-聯宿資訊股份有限公司 / 網頁設計師</h3>
                                 <ul>
-                                    <li>1. 購物網站製作，使用者UI/UX設計</li>
+                                    <li>1. 購物網站UI/UX設計，使用者介面設計</li>
                                     <li>2. 網站切版、Js撰寫、bootstrap應用、jquery應用...</li>
                                     <li>3. 設計與製作公司形象規範、網站視覺風格</li>
                                     <li>4. 設計電子報與用戶端互動平台</li>
@@ -473,11 +473,14 @@
 
 
         $(window).scroll(function() {
+
             // RESUME
             var resumeTop = $('#resume').position().top;
             var aboutTop = $('#about').position().top;
-
-            $('.about-content-left,.about-content-right,.container.left,.container.right').each(function() {
+            $('.about-content-left,.about-content-right').each(function() {
+                $(this).addClass('animation');
+            })
+            $('.container.left,.container.right').each(function() {
                 var bottom_of_object = $(this).offset().top + $(this).outerHeight();
                 var bottom_of_window = $(window).scrollTop() + $(window).height();
                 if (bottom_of_window > bottom_of_object) {
@@ -524,7 +527,6 @@
 
 
         });
-
 
     });
 </script>
