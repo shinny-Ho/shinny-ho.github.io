@@ -1137,7 +1137,7 @@ html {
         left: 15px;
     }
     .container {
-        width: calc(100% - 65px);
+        width: calc(100% - 20px);
         padding-left: 40px;
     }
     .container::before {
@@ -1156,11 +1156,20 @@ html {
         display: none;
     }
     .left .timeline-title {
+        width: 100%;
         left: 0;
-        border-top-right-radius: 0px;
+        border-top-right-radius: 5px;
         border-bottom-left-radius: 0px;
         border-top-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 0px;
+    }
+    .right .timeline-title {
+        width: 100%;
+        left: 0;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0px;
     }
     .left::after,
     .right::after {
