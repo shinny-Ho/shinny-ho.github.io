@@ -474,8 +474,8 @@
             var scrollPos = $(window).scrollTop();
             var windowHeight = $(window).height();
             // progress bar
-            var skillTop = $('#skills').position().top;
-            var aboutTop = $('#about').position().top;
+            var skillTop = $('#skills').offset().top;
+            var aboutTop = $('#about').offset().top;
             if (skillTop <= (scrollPos + windowHeight / 2)) {
                 $('#skills .progress-bar').each(function() {
                     var thisValue = $(this).data('progress');
