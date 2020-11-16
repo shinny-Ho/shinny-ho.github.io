@@ -594,6 +594,9 @@ html {
     padding-left: 10px;
 }
 
+
+/* portfolio content */
+
 .portfolio-content {
     margin-bottom: 40px;
     width: 100%;
@@ -654,8 +657,6 @@ html {
     padding-top: 30%;
     box-sizing: border-box;
 }
-
-.portfolio-back {}
 
 .circle-point {
     width: 50px;
@@ -808,10 +809,6 @@ html {
     /* background-image: url('/img/original.jpg');
     background-size: cover;
     background-position: center; */
-}
-
-.about-content {
-    width: 100%;
 }
 
 .timeline {
