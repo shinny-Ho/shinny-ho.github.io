@@ -174,7 +174,7 @@
                             </div>
                         </div>
                         <div class="progress-content">
-                            <div class="progress-title">figma</div>
+                            <div class="progress-title">Figma</div>
                             <div class="progress">
                                 <div class="progress-bar" data-progress="70">
                                     70%
@@ -198,7 +198,7 @@
                             </div>
                         </div>
                         <div class="progress-content">
-                            <div class="progress-title">HTML</div>
+                            <div class="progress-title">Html</div>
                             <div class="progress">
                                 <div class="progress-bar" data-progress="90">
                                     90%
@@ -206,7 +206,7 @@
                             </div>
                         </div>
                         <div class="progress-content">
-                            <div class="progress-title">HTML5</div>
+                            <div class="progress-title">Html5</div>
                             <div class="progress">
                                 <div class="progress-bar" data-progress="50">
                                     50%
@@ -214,7 +214,7 @@
                             </div>
                         </div>
                         <div class="progress-content">
-                            <div class="progress-title">CSS</div>
+                            <div class="progress-title">Css</div>
                             <div class="progress">
                                 <div class="progress-bar" data-progress="90">
                                     90%
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                         <div class="progress-content">
-                            <div class="progress-title">CSS3</div>
+                            <div class="progress-title">Css3</div>
                             <div class="progress">
                                 <div class="progress-bar" data-progress="50">
                                     50%
@@ -230,7 +230,7 @@
                             </div>
                         </div>
                         <div class="progress-content">
-                            <div class="progress-title">SCSS</div>
+                            <div class="progress-title">Scss</div>
                             <div class="progress">
                                 <div class="progress-bar" data-progress="75">
                                     75%
@@ -471,25 +471,11 @@
 
 
         $(window).on("scroll", function() {
-
-            // RESUME
-            //var resumeTop = $('#resume').position().top;
-            //var aboutTop = $('#about').position().top;
-            $('.about-content-left,.about-content-right').each(function() {
-                $(this).addClass('animation');
-            })
-            $('.container.left,.container.right').each(function() {
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-                if (bottom_of_window > bottom_of_object) {
-                    $(this).addClass('animation');
-                }
-            });
-
             var scrollPos = $(window).scrollTop();
             var windowHeight = $(window).height();
             // progress bar
             var skillTop = $('#skills').position().top;
+            var aboutTop = $('#about').position().top;
             if (skillTop <= (scrollPos + windowHeight / 2)) {
                 $('#skills .progress-bar').each(function() {
                     var thisValue = $(this).data('progress');
@@ -497,11 +483,29 @@
                     $(this).css('width', thisValue + '%');
                 });
             };
+
+            //about
+            if (aboutTop <= (scrollPos + windowHeight / 2)) {
+                $('.about-content-left,.about-content-right').each(function() {
+                    $(this).addClass('animation');
+                })
+            };
+
+            //resume
+            $('.container.left,.container.right').each(function() {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = scrollPos + windowHeight;
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).addClass('animation');
+                }
+            });
+
+
+
             // 滑到某一區塊固定在上方
-            var scrollVal = $(window).scrollTop();
             var tagpos = $(".wrapper").offset().top;
 
-            if (tagpos - scrollVal <= 0) {
+            if (tagpos - scrollPos <= 0) {
                 $('.js-nav-bar').addClass('fixed');
                 $('.nav-bar ul').css({
                     "opacity": "1",
@@ -515,7 +519,7 @@
                 });
             }
 
-            if (scrollVal > 100) {
+            if (scrollPos > 100) {
                 $('.down').hide();
                 $('.up').css('display', 'flex');
             } else {
