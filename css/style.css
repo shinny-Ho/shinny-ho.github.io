@@ -591,7 +591,26 @@ html {
 }
 
 .tab span {
-    padding-left: 10px;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.tab-webcolor {
+    background-color: #09c6ff;
+}
+
+.tab-uicolor {
+    background-color: #dbe6f2;
+}
+
+.tab-logocolor {
+    background-color: #09ffde;
+}
+
+.tab-graphiccolor {
+    background-color: #e49fff;
 }
 
 
@@ -620,11 +639,11 @@ html {
     -webkit-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    opacity: 0.5;
+    opacity: .8;
 }
 
-.portfolio-Triangle:hover .portfolio-front {
-    background-color: rgba(123, 79, 158, 0.5);
+.portfolio-Triangle:hover {
+    opacity: 1;
 }
 
 .portfolio-Triangle:hover .portfolio-img img {
@@ -632,7 +651,33 @@ html {
     transition: all 0.5s;
 }
 
+.portfolio-Triangle.webdesign {
+    background-color: #09c6ff;
+}
+
+.portfolio-Triangle.logodesign {
+    background-color: #09ffde;
+}
+
+.portfolio-Triangle.graphicdesign {
+    background-color: #e49fff;
+}
+
+.portfolio-Triangle.uidesign {
+    background-color: #dbe6f2;
+}
+
 .portfolio-Triangle.pos2:hover .portfolio-img img {
+    transform: scale(1.1) rotate(180deg);
+    transition: all 0.5s;
+}
+
+.portfolio-Triangle.pos3:hover .portfolio-img img {
+    transform: scale(1.1) rotate(180deg);
+    transition: all 0.5s;
+}
+
+.portfolio-Triangle.pos7:hover .portfolio-img img {
     transform: scale(1.1) rotate(180deg);
     transition: all 0.5s;
 }
@@ -649,13 +694,19 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 30%;
     box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-img img {
+    width: 170px;
 }
 
 .circle-point {
@@ -666,7 +717,7 @@ html {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #662d91;
+    background-color: #696969;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -704,111 +755,94 @@ html {
 .pos1 {
     top: 0;
     left: calc(50% - 160px);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos2 {
-    top: calc(0% - 280px);
-    left: calc(50% + 20px);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    bottom: 15px;
+    left: calc(50% - 160px);
     transform: rotate(180deg);
+    position: absolute;
 }
 
 .pos2 img {
-    width: 170px;
     transform: rotate(180deg);
 }
 
 .pos3 {
-    top: calc(0% - 560px);
+    top: 0;
     left: calc(50% - 340px);
     transform: rotate(180deg);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
+}
+
+.pos3 img {
+    transform: rotate(180deg);
 }
 
 .pos4 {
-    top: calc(0% - 840px);
+    top: 0;
     left: calc(50% + 200px);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos5 {
-    top: calc(0% - 1028px);
+    top: 85px;
     left: calc(50% - 453px);
     transform: scale(.8);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos6 {
-    top: calc(0% - 1308px);
+    top: 85px;
     left: calc(50% - 600px);
     transform: rotate(180deg) scale(.8);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos7 {
-    top: calc(0% - 1380px);
-    left: calc(50% - 160px);
+    top: 0;
+    left: calc(50% + 20px);
     transform: rotate(180deg);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
+}
+
+.pos7 img {
+    transform: rotate(180deg);
 }
 
 .pos8 {
-    top: calc(0% - 1655px);
+    bottom: 15px;
     left: calc(50% + 20px);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos9 {
-    top: calc(0% - 1968px);
+    bottom: 45px;
     left: calc(50% + 165px);
     transform: rotate(180deg) scale(.8);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos10 {
-    top: calc(0% - 2250px);
+    bottom: 45px;
     left: calc(50% + 315px);
     transform: scale(.8);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos11 {
-    top: calc(0% - 2466px);
+    bottom: -15px;
     left: calc(50% - 453px);
     transform: rotate(180deg) scale(.8);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .pos12 {
-    top: calc(0% - 2746px);
+    bottom: -15px;
     left: calc(50% - 305px);
     transform: scale(.8);
-    /* background-image: url('/img/original.jpg');
-    background-size: cover;
-    background-position: center; */
+    position: absolute;
 }
 
 .timeline {
@@ -1085,10 +1119,18 @@ html {
     .portfolio-img {
         padding-top: 0;
     }
-    .pos2 img {
+    .pos2 img,
+    .pos3 img,
+    .pos7 img {
         transform: rotate(360deg);
     }
     .portfolio-Triangle.pos2:hover .portfolio-img img {
+        transform: rotate(360deg);
+    }
+    .portfolio-Triangle.pos3:hover .portfolio-img img {
+        transform: rotate(360deg);
+    }
+    .portfolio-Triangle.pos7:hover .portfolio-img img {
         transform: rotate(360deg);
     }
 }
