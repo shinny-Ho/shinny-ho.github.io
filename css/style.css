@@ -677,7 +677,22 @@ html {
     transition: all 0.5s;
 }
 
+.portfolio-Triangle.pos6:hover .portfolio-img img {
+    transform: scale(1.1) rotate(180deg);
+    transition: all 0.5s;
+}
+
 .portfolio-Triangle.pos7:hover .portfolio-img img {
+    transform: scale(1.1) rotate(180deg);
+    transition: all 0.5s;
+}
+
+.portfolio-Triangle.pos9:hover .portfolio-img img {
+    transform: scale(1.1) rotate(180deg);
+    transition: all 0.5s;
+}
+
+.portfolio-Triangle.pos11:hover .portfolio-img img {
     transform: scale(1.1) rotate(180deg);
     transition: all 0.5s;
 }
@@ -800,6 +815,10 @@ html {
     position: absolute;
 }
 
+.pos6 img {
+    transform: rotate(180deg);
+}
+
 .pos7 {
     top: 0;
     left: calc(50% + 20px);
@@ -824,6 +843,10 @@ html {
     position: absolute;
 }
 
+.pos9 img {
+    transform: rotate(180deg);
+}
+
 .pos10 {
     bottom: 45px;
     left: calc(50% + 315px);
@@ -836,6 +859,10 @@ html {
     left: calc(50% - 453px);
     transform: rotate(180deg) scale(.8);
     position: absolute;
+}
+
+.pos11 img {
+    transform: rotate(180deg);
 }
 
 .pos12 {
@@ -1121,7 +1148,10 @@ html {
     }
     .pos2 img,
     .pos3 img,
-    .pos7 img {
+    .pos6 img,
+    .pos7 img,
+    .pos9 img,
+    .pos11 img {
         transform: rotate(360deg);
     }
     .portfolio-Triangle.pos2:hover .portfolio-img img {
@@ -1130,7 +1160,16 @@ html {
     .portfolio-Triangle.pos3:hover .portfolio-img img {
         transform: rotate(360deg);
     }
+    .portfolio-Triangle.pos6:hover .portfolio-img img {
+        transform: rotate(360deg);
+    }
     .portfolio-Triangle.pos7:hover .portfolio-img img {
+        transform: rotate(360deg);
+    }
+    .portfolio-Triangle.pos9:hover .portfolio-img img {
+        transform: rotate(360deg);
+    }
+    .portfolio-Triangle.pos11:hover .portfolio-img img {
         transform: rotate(360deg);
     }
 }
