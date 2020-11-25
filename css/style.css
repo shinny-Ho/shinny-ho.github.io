@@ -796,8 +796,9 @@ html {
 }
 
 .pos4 {
-    top: 0;
-    left: calc(50% + 200px);
+    top: 28px;
+    left: calc(50% + 167px);
+    transform: scale(.8);
     position: absolute;
 }
 
