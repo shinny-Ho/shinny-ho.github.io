@@ -992,11 +992,11 @@ html {
 .timeline-title {
     position: absolute;
     top: 0;
-    padding: 5px 0 5px 0;
-    width: 335px;
+    padding: 5px;
+    max-width: 335px;
+    width: 100%;
     background-color: #444444;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    /* border-bottom-left-radius: 5px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1004,13 +1004,14 @@ html {
 
 .left .timeline-title {
     right: 0;
+    border-top-right-radius: 5px;
 }
 
 .right .timeline-title {
     left: 0;
     border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 0px;
+    /* border-bottom-right-radius: 5px;
+    border-top-right-radius: 0px; */
     border-bottom-left-radius: 0px;
 }
 
@@ -1173,6 +1174,19 @@ html {
     .portfolio-Triangle.pos11:hover .portfolio-img img {
         transform: rotate(360deg);
     }
+    .timeline {
+        width: 90%;
+    }
+    .left .timeline-title,
+    .right .timeline-title {
+        max-width: 100%;
+    }
+    .right .timeline-title {
+        border-top-right-radius: 5px;
+    }
+    .timeline-title {
+        border-top-left-radius: 5px;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -1247,19 +1261,15 @@ html {
         display: none;
     }
     .left .timeline-title {
-        width: 100%;
-        left: 0;
         border-top-right-radius: 5px;
         border-bottom-left-radius: 0px;
         border-top-left-radius: 5px;
         border-bottom-right-radius: 0px;
     }
     .right .timeline-title {
-        width: 100%;
-        left: 0;
         border-top-left-radius: 5px;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 5px;
+        /* border-bottom-right-radius: 0px; */
+        /* border-top-right-radius: 5px; */
         border-bottom-left-radius: 0px;
     }
     .left::after,
