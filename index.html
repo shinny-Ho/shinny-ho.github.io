@@ -63,7 +63,7 @@
                 <span></span>
             </div>
             <div class="about-section" id="about">
-                <h1>About Me</h1>
+                <h1>ABOUT ME</h1>
                 <div class="about-content-flex">
                     <div class="about-content-left">
                         <div class="about-img-frame">
@@ -73,7 +73,7 @@
                         </div>
                         <div class="about-name">
                             <p>Shinny Ho</p>
-                            <p>網頁設計師</p>
+                            <p>網頁設計師 / 網頁UI設計師</p>
                         </div>
                     </div>
                     <div class="about-split">
@@ -84,7 +84,20 @@
                     </div>
                     <div class="about-content-right">
                         <div class="about-des more">
-                            <p>我是何欣怡，現居基隆市，做事認真負責、行事小心謹慎，在家中排行老二。父親在建築事務所擔任建築設計師，母親在基隆市政府擔任公務人員，哥哥在新竹科學園區擔任製程經理，妹妹在汐止科學園區擔任品管工程師，家中共有五人。從小父母親就以民主的方式教育我們，並教導我們養成獨立自主與主動積極學習的觀念，因此，在成長和求學過程中，若遇到困難或困擾的事，我都能一一克服並解決問題。 由於處於網際網路發達的時代，在近十年的工作期間,我不斷的學習網頁設計相關技術，廣博吸收多元知識、培養專長，使我能更清楚未來的趨勢與發展，不論是線上課程或是實體課程從未間斷，期許自己能成為稱職、專業的人員。</p>
+                            <h3>工作技能：</h3>
+                            <ol>
+                                <li>1. UI介面設計</li>
+                                <li>2. 將設計稿藉由 HTML5/CSS3/Jquery/JS 完成切版</li>
+                                <li>3. Scss程式編譯撰寫</li>
+                                <li>4. 使用Figma完成介面設計並分享至Zeplin</li>
+                                <li>5. Banner/廣告/logo/名片設計/包裝...平面相關設計</li>
+                            </ol>
+                            <h3>擅長工具:</h3>
+                            <ol>
+                                <li>網頁相關工具：Vscode / Sourcetree / Javascript / Html / Css / Scss / RWD </li>
+                                <li>平面相關工具：Photoshop / Illustrator</li>
+                                <li>介面相關工具：Figma / Adobe XD / Zeplin</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -442,39 +455,39 @@
 
         // 看更多
         // Configure/customize these variables.
-        var showChar = 400; // How many characters are shown by default
-        var ellipsestext = "...";
-        var moretext = "看更多 >";
-        var lesstext = "收合 >";
+        // var showChar = 400; // How many characters are shown by default
+        // var ellipsestext = "...";
+        // var moretext = "看更多 >";
+        // var lesstext = "收合 >";
 
 
-        $('.more').each(function() {
-            var content = $(this).html();
+        // $('.more').each(function() {
+        //     var content = $(this).html();
 
-            if (content.length > showChar) {
+        //     if (content.length > showChar) {
 
-                var c = content.substr(0, showChar);
-                var h = content.substr(showChar, content.length - showChar);
+        //         var c = content.substr(0, showChar);
+        //         var h = content.substr(showChar, content.length - showChar);
 
-                var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+        //         var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
 
-                $(this).html(html);
-            }
+        //         $(this).html(html);
+        //     }
 
-        });
+        // });
 
-        $(".morelink").click(function() {
-            if ($(this).hasClass("less")) {
-                $(this).removeClass("less");
-                $(this).html(moretext);
-            } else {
-                $(this).addClass("less");
-                $(this).html(lesstext);
-            }
-            $(this).parent().prev().toggle();
-            $(this).prev().toggle();
-            return false;
-        });
+        // $(".morelink").click(function() {
+        //     if ($(this).hasClass("less")) {
+        //         $(this).removeClass("less");
+        //         $(this).html(moretext);
+        //     } else {
+        //         $(this).addClass("less");
+        //         $(this).html(lesstext);
+        //     }
+        //     $(this).parent().prev().toggle();
+        //     $(this).prev().toggle();
+        //     return false;
+        // });
 
         // nav-bar
         // var bodyClass = document.body.classList;
